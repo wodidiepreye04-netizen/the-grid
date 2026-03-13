@@ -1,0 +1,127 @@
+/* THE GRID — PAGE OVERRIDES */
+
+/* === BUILD PAGE === */
+.build-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--g-sp-4);
+}
+
+/* === TODAY PAGE === */
+.today-current {
+  margin-bottom: var(--g-sp-6);
+  padding: var(--g-sp-4);
+  background: var(--g-surface);
+  border: 1px solid var(--g-blue);
+}
+
+.today-current__label {
+  font-size: var(--g-fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--g-blue);
+  margin-bottom: var(--g-sp-2);
+}
+
+.today-current__name {
+  font-size: var(--g-fs-lg);
+  font-weight: 700;
+}
+
+.today-current__timer {
+  font-size: var(--g-fs-2xl);
+  font-weight: 300;
+  color: var(--g-green);
+  margin-top: var(--g-sp-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* === REPORT PAGE === */
+.report-block {
+  display: flex;
+  align-items: center;
+  gap: var(--g-sp-3);
+  padding: var(--g-sp-2) var(--g-sp-3);
+  border-bottom: 1px solid var(--g-border);
+  font-size: var(--g-fs-sm);
+}
+
+.report-block__status {
+  min-width: 72px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--g-fs-xs);
+}
+
+.report-verdict {
+  margin-top: var(--g-sp-6);
+  padding: var(--g-sp-4);
+  background: var(--g-surface);
+  border: 1px solid var(--g-border);
+}
+
+.report-verdict__title {
+  font-size: var(--g-fs-xs);
+  color: var(--g-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--g-sp-2);
+}
+
+.report-verdict__text {
+  font-size: var(--g-fs-base);
+  line-height: 1.6;
+}
+
+/* === ANALYTICS PAGE === */
+.chart-container {
+  background: var(--g-surface);
+  border: 1px solid var(--g-border);
+  padding: var(--g-sp-4);
+  margin-bottom: var(--g-sp-4);
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: 250px !important;
+}
+
+/* === SETTINGS PAGE === */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--g-sp-3) 0;
+  border-bottom: 1px solid var(--g-border);
+}
+
+.setting-row__label {
+  font-size: var(--g-fs-sm);
+}
+
+.setting-row__desc {
+  font-size: var(--g-fs-xs);
+  color: var(--g-text-mute);
+}
+
+/* === TOGGLE SWITCH === */
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: var(--g-border-lit);
+  cursor: pointer;
+  transition: background var(--g-trans);
+}
+.toggle--active { background: var(--g-green-dim); }
+.toggle__knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: var(--g-text);
+  transition: transform var(--g-trans);
+}
+.toggle--active .toggle__knob { transform: translateX(20px); }

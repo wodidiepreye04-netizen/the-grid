@@ -1,0 +1,54 @@
+/* THE GRID — DESIGN TOKENS */
+:root {
+  /* === COLORS === */
+  --g-bg:         #0a0a0a;
+  --g-surface:    #111111;
+  --g-surface-2:  #161616;
+  --g-border:     #1e1e1e;
+  --g-border-lit: #2a2a2a;
+
+  --g-text:       #cccccc;
+  --g-text-dim:   #666666;
+  --g-text-mute:  #444444;
+
+  --g-green:      #00ff41;
+  --g-green-dim:  #00cc33;
+  --g-red:        #ff3333;
+  --g-red-dim:    #cc2222;
+  --g-blue:       #0088ff;
+  --g-blue-dim:   #0066cc;
+  --g-amber:      #ffaa00;
+  --g-amber-dim:  #cc8800;
+  --g-grey:       #333333;
+
+  /* === TYPOGRAPHY === */
+  --g-font:       'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --g-fs-xs:      0.6875rem;   /* 11px */
+  --g-fs-sm:      0.75rem;     /* 12px */
+  --g-fs-base:    0.8125rem;   /* 13px */
+  --g-fs-md:      0.9375rem;   /* 15px */
+  --g-fs-lg:      1.125rem;    /* 18px */
+  --g-fs-xl:      1.5rem;      /* 24px */
+  --g-fs-2xl:     2rem;        /* 32px */
+  --g-fs-timer:   4rem;        /* 64px */
+
+  /* === SPACING (4px base) === */
+  --g-sp-1:  4px;
+  --g-sp-2:  8px;
+  --g-sp-3:  12px;
+  --g-sp-4:  16px;
+  --g-sp-5:  20px;
+  --g-sp-6:  24px;
+  --g-sp-8:  32px;
+  --g-sp-10: 40px;
+  --g-sp-12: 48px;
+  --g-sp-16: 64px;
+
+  /* === LAYOUT === */
+  --g-nav-h:   56px;
+  --g-max-w:   720px;
+  --g-radius:  0px;   /* SHARP EDGES — NO ROUNDING */
+
+  /* === TRANSITIONS === */
+  --g-trans:   120ms ease;
+}

@@ -1,0 +1,121 @@
+/* THE GRID — LAYOUT */
+
+/* === APP SHELL === */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === NAV === */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--g-nav-h);
+  background: var(--g-surface);
+  border-bottom: 1px solid var(--g-border);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--g-sp-4);
+}
+
+.nav__brand {
+  font-size: var(--g-fs-md);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--g-green);
+  margin-right: auto;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--g-sp-1);
+}
+
+.nav__link {
+  padding: var(--g-sp-2) var(--g-sp-3);
+  font-size: var(--g-fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--g-text-dim);
+  transition: color var(--g-trans), background var(--g-trans);
+  border: 1px solid transparent;
+}
+
+.nav__link:hover {
+  color: var(--g-text);
+  background: var(--g-surface-2);
+}
+
+.nav__link--active {
+  color: var(--g-green);
+  border-color: var(--g-border-lit);
+  background: var(--g-surface-2);
+}
+
+/* === CONTENT === */
+.content {
+  margin-top: var(--g-nav-h);
+  padding: var(--g-sp-6) var(--g-sp-4);
+  width: 100%;
+  max-width: var(--g-max-w);
+  margin-left: auto;
+  margin-right: auto;
+  flex: 1;
+}
+
+/* === PAGE HEADER === */
+.page-header {
+  margin-bottom: var(--g-sp-6);
+  padding-bottom: var(--g-sp-4);
+  border-bottom: 1px solid var(--g-border);
+}
+
+.page-header__title {
+  font-size: var(--g-fs-lg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-header__sub {
+  font-size: var(--g-fs-xs);
+  color: var(--g-text-dim);
+  margin-top: var(--g-sp-1);
+}
+
+/* === RESPONSIVE: MOBILE === */
+@media (max-width: 640px) {
+  .nav {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    border-top: 1px solid var(--g-border);
+    border-bottom: none;
+    height: 52px;
+    justify-content: center;
+  }
+
+  .nav__brand { display: none; }
+
+  .nav__links {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .nav__link {
+    font-size: var(--g-fs-xs);
+    padding: var(--g-sp-2) var(--g-sp-2);
+  }
+
+  .content {
+    margin-top: 0;
+    margin-bottom: 52px;
+    padding: var(--g-sp-4) var(--g-sp-3);
+  }
+}

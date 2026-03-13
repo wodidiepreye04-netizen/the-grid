@@ -1,0 +1,58 @@
+/* THE GRID — BASE STYLES */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--g-font);
+  font-size: var(--g-fs-base);
+  font-weight: 400;
+  color: var(--g-text);
+  background: var(--g-bg);
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+
+/* === SELECTION === */
+::selection {
+  background: var(--g-green);
+  color: var(--g-bg);
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--g-bg); }
+::-webkit-scrollbar-thumb { background: var(--g-border-lit); }
+::-webkit-scrollbar-thumb:hover { background: var(--g-text-mute); }
+
+/* === HEADINGS === */
+h1 { font-size: var(--g-fs-xl); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--g-text); }
+h2 { font-size: var(--g-fs-lg); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--g-text-dim); }
+h3 { font-size: var(--g-fs-md); font-weight: 500; color: var(--g-text-dim); }
+
+/* === LINKS === */
+a { color: var(--g-blue); transition: color var(--g-trans); }
+a:hover { color: var(--g-green); }
+
+/* === UTILITY === */
+.dim { color: var(--g-text-dim); }
+.mute { color: var(--g-text-mute); }
+.mono { font-family: var(--g-font); }
+.upper { text-transform: uppercase; letter-spacing: 0.06em; }
+.green { color: var(--g-green); }
+.red { color: var(--g-red); }
+.amber { color: var(--g-amber); }
+.blue { color: var(--g-blue); }
+
+/* === STATUS INDICATORS === */
+.status-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: var(--g-sp-2);
+}
+.status-dot--completed { background: var(--g-green); }
+.status-dot--started   { background: var(--g-blue); }
+.status-dot--pending   { background: var(--g-grey); }
+.status-dot--skipped   { background: var(--g-red); }
+.status-dot--delayed   { background: var(--g-amber); }
